@@ -138,9 +138,10 @@ $color-green: #6aba00;
 
 .btn-text {
   &:link,
-  &visited {
+  &:visited {
     display: inline-block;
     text-decoration: none;
+    color: $color-default;
     border-bottom: 1px solid $color-default;
     font-size: $default-font-size;
   }
