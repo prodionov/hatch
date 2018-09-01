@@ -105,7 +105,7 @@ export default class Widget extends Component {
     console.log('isDisplayed', this.state.isDisplayed);
     return (
       <div className="row">
-        <div className="col-1-of-3">
+        <div className="col-1-of-2">
           <div className="widget">
             <h2 className="heading-secondary">your income & spend</h2>
             <div className="widget__content">
@@ -118,9 +118,9 @@ export default class Widget extends Component {
             </div>
           </div>
         </div>
-        <div className="col-1-of-3">
+        <div className="col-1-of-2">
           <div className="widget">
-            <h2 className="heading-secondary">your income & spend</h2>
+            <h2 className="heading-secondary">spend less</h2>
             <div className="widget__content">
               <h4 className="heading-quaternary u-text-center">
                 Try reducing your monthly spending to see

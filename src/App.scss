@@ -1,15 +1,24 @@
 @import '//fonts.googleapis.com/css?family=Open+Sans';
+@import './components/Widget';
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+
+  @include respond(phone) {
+    margin: 0 auto;
+  }
 }
 
 body {
   box-sizing: border-box;
   padding: 5rem 10rem;
+
+  @include respond(phone) {
+    padding: 0;
+  }
 }
 
 html {
