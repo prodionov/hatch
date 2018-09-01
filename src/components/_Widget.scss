@@ -33,7 +33,8 @@ $color-green: #6aba00;
 
 //grid
 .row {
-  width: 100%;
+  //width: 100%;
+  max-width: 114rem;
   background-color: white;
   margin: 0 auto;
 
@@ -167,8 +168,97 @@ $color-green: #6aba00;
   }
 }
 
-.slider {
+// .slider {
+//   width: 100%;
+//   -webkit-appearance: none;
+//   height: 1rem;
+//   border-radius: 0.5rem;
+//   background: lighten($color-dark-grey, 0.7);
+//   outline: none;
+//   opacity: 0.7;
+//
+//   &::-webkit-slider-thumb {
+//     -webkit-appearance: none;
+//     background-color: $color-default;
+//     width: 2rem;
+//     height: 2rem;
+//     border-radius: 50%;
+//   }
+// }
+
+.rangeslider {
+  margin: 0;
+}
+
+.rangeslider-horizontal {
   width: 100%;
+  -webkit-appearance: none;
+  height: 1rem;
+  border-radius: 0.5rem;
+  background: lighten($color-dark-grey, 0.7);
+  outline: none;
+  opacity: 0.7;
+}
+.rangeslider-horizontal .rangeslider__fill {
+  height: 1rem;
+  background-color: #7cb342;
+  border-radius: 10px;
+  top: 0;
+}
+
+.rangeslider .rangeslider__handle {
+  -webkit-appearance: none;
+  background-color: $color-default;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.rangeslider-horizontal .rangeslider__handle:after {
+  -webkit-appearance: none;
+  background-color: $color-default;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.rangeslider .rangeslider__handle-tooltip {
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  visibility: visible;
+  position: absolute;
+  font-weight: normal;
+  font-size: 14px;
+  transition: all 100ms ease-in;
+  border-radius: 0px;
+  display: inline-block;
+  color: white;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+.rangeslider .rangeslider__handle-tooltip span {
+  visibility: visible;
+  color: $color-dark-grey;
+  font-size: $default-font-size;
+  font-weight: 600;
+  margin-top: 12px;
+  display: inline-block;
+  line-height: 100%;
+}
+.rangeslider .rangeslider__handle-tooltip:after {
+  visibility: visible;
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+.rangeslider-horizontal .rangeslider__handle-tooltip {
+  background-color: transparent;
+  top: -3rem;
 }
 
 //utility functions
