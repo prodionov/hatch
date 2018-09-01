@@ -45,6 +45,28 @@ function RangeSliders(props) {
 }
 
 export default class Widget extends Component {
+  state = {
+    isLiked: '',
+    isDisplayed: true
+  };
+
+  thumbUpHandler = event => {
+    event.preventDefault();
+    alert('we are happy that you like our service');
+    this.setState({ isLiked: true });
+  };
+
+  thumbDownHandler = event => {
+    event.preventDefault();
+    alert('please let us know how we can improve');
+    this.setState({ isLiked: false });
+  };
+
+  displayLink = event => {
+    event.preventDefault();
+    this.setState({ isDisplayed: false });
+  };
+
   render() {
     const data = {
       incomes: [
@@ -80,7 +102,7 @@ export default class Widget extends Component {
         }
       ]
     };
-    console.log(data.incomes[0].amount.toLocaleString());
+    console.log('isDisplayed', this.state.isDisplayed);
     return (
       <div className="row">
         <div className="col-1-of-3">
@@ -115,23 +137,33 @@ export default class Widget extends Component {
               <a
                 href="https://about.hatchplan.co.uk/"
                 target="_blank"
-                className="btn"
+                className="btn u-margin-bottom-small"
               >
                 Find ways to save
               </a>
-              <div className="row">
-                <a href="" className="btn-text u-margin-bottom-small">
-                  Was this helpful?
-                </a>
-                <div className="logo-box">
-                  <a href="" className="thumb">
-                    <img src={thumbUp} alt="thumb-up" className="logo" />
+              {this.state.isDisplayed && (
+                <div className="row">
+                  <a
+                    href=""
+                    className="btn-text u-margin-bottom-small"
+                    onClick={this.displayLink}
+                  >
+                    Was this helpful?
                   </a>
-                  <a href="" clssName="thumb">
-                    <img src={thumbDown} alt="thumb-down" className="logo" />
-                  </a>
+                  <div className="logo-box">
+                    <a href="" className="thumb" onClick={this.thumbUpHandler}>
+                      <img src={thumbUp} alt="thumb-up" className="logo" />
+                    </a>
+                    <a
+                      href=""
+                      className="thumb"
+                      onClick={this.thumbDownHandler}
+                    >
+                      <img src={thumbDown} alt="thumb-down" className="logo" />
+                    </a>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>

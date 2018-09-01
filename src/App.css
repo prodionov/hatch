@@ -98,9 +98,10 @@ html {
   padding: 1rem;
   border: 1px solid #6aba00; }
 
-.btn-text:link, .btn-textvisited {
+.btn-text:link, .btn-text:visited {
   display: inline-block;
   text-decoration: none;
+  color: #00576d;
   border-bottom: 1px solid #00576d;
   font-size: 1.6rem; }
 
