@@ -1,0 +1,20 @@
+@import '//fonts.googleapis.com/css?family=Open+Sans';
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 5rem 10rem;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans';
+}
+
+@import './components/Widget';
