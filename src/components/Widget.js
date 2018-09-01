@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Slider from 'react-rangeslider';
+import './rangeslider.css';
 import thumbUp from './assets/thumbs-up.svg';
 import thumbDown from './assets/thumb-down.svg';
 
@@ -23,25 +25,35 @@ function Stats(props) {
   );
 }
 
-function RangeSliders(props) {
-  return (
-    <div className="row row__slider">
-      <div className="col-2-of-7">
-        <h4 className="heading-quaternary">{props.name}</h4>
-      </div>
-      <div className="col-5-of-7">
-        <div className="slidecontainer">
-          <input
-            type="range"
-            className="slider"
-            min="0"
-            max={props.max}
-            data-show-value="true"
-          />
+class RangeSliders extends Component {
+  state = {
+    value: 0
+  };
+
+  handleChange = value => {
+    this.setState({ value: value });
+  };
+  render() {
+    return (
+      <div className="row row__slider">
+        <div className="col-2-of-7">
+          <h4 className="heading-quaternary">{this.props.name}</h4>
+        </div>
+        <div className="col-5-of-7">
+          <div className="slider">
+            {/* <input type="range" className="slider" min="0" max={props.max} /> */}
+            <Slider
+              min={0}
+              max={this.props.max}
+              value={this.state.value}
+              onChange={this.handleChange}
+              // className="slider"
+            />
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default class Widget extends Component {
