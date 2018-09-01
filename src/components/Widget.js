@@ -7,7 +7,9 @@ function Stats(props) {
     <div className="row  row__widget">
       <div className="col-2-of-4">
         <h4 className="heading-quaternary">{props.name}</h4>
-        <span className="box box__medium">£{props.data.amount}</span>
+        <span className="box box__medium">
+          £{props.data.amount.toLocaleString()}
+        </span>
       </div>
       <div className="col-1-of-4">
         <h4 className="heading-quaternary">From age:</h4>
@@ -78,7 +80,7 @@ export default class Widget extends Component {
         }
       ]
     };
-    console.log(Object.keys(data.incomes));
+    console.log(data.incomes[0].amount.toLocaleString());
     return (
       <div className="row">
         <div className="col-1-of-3">
