@@ -32,8 +32,10 @@ class RangeSliders extends Component {
 
   handleChange = value => {
     this.setState({ value: value });
+    localStorage.setItem(this.props.name, value);
   };
   render() {
+    let data = Number(localStorage.getItem(this.props.name));
     return (
       <div className="row row__slider">
         <div className="col-2-of-7">
@@ -41,13 +43,11 @@ class RangeSliders extends Component {
         </div>
         <div className="col-5-of-7">
           <div className="slider">
-            {/* <input type="range" className="slider" min="0" max={props.max} /> */}
             <Slider
               min={0}
               max={this.props.max}
-              value={this.state.value}
+              value={data}
               onChange={this.handleChange}
-              // className="slider"
             />
           </div>
         </div>

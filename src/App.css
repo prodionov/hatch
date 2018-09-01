@@ -96,6 +96,23 @@
   border-bottom: 1px solid #00576d;
   font-size: 1.6rem; }
 
+.u-text-center {
+  text-align: center;
+  padding: 2rem 0; }
+
+.u-color-green {
+  color: #6aba00; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem; }
+
+.logo-box {
+  display: inline-block; }
+
+.logo {
+  height: 2.5rem;
+  margin: 0 1rem; }
+
 .rangeslider {
   margin: 0; }
 
@@ -164,23 +181,6 @@
 .rangeslider-horizontal .rangeslider__handle-tooltip {
   background-color: transparent;
   top: -3rem; }
-
-.u-text-center {
-  text-align: center;
-  padding: 2rem 0; }
-
-.u-color-green {
-  color: #6aba00; }
-
-.u-margin-bottom-small {
-  margin-bottom: 1rem; }
-
-.logo-box {
-  display: inline-block; }
-
-.logo {
-  height: 2.5rem;
-  margin: 0 1rem; }
 
 *,
 *::after,
@@ -302,6 +302,23 @@ html {
   border-bottom: 1px solid #00576d;
   font-size: 1.6rem; }
 
+.u-text-center {
+  text-align: center;
+  padding: 2rem 0; }
+
+.u-color-green {
+  color: #6aba00; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem; }
+
+.logo-box {
+  display: inline-block; }
+
+.logo {
+  height: 2.5rem;
+  margin: 0 1rem; }
+
 .rangeslider {
   margin: 0; }
 
@@ -370,20 +387,3 @@ html {
 .rangeslider-horizontal .rangeslider__handle-tooltip {
   background-color: transparent;
   top: -3rem; }
-
-.u-text-center {
-  text-align: center;
-  padding: 2rem 0; }
-
-.u-color-green {
-  color: #6aba00; }
-
-.u-margin-bottom-small {
-  margin-bottom: 1rem; }
-
-.logo-box {
-  display: inline-block; }
-
-.logo {
-  height: 2.5rem;
-  margin: 0 1rem; }

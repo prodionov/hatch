@@ -168,23 +168,31 @@ $color-green: #6aba00;
   }
 }
 
-// .slider {
-//   width: 100%;
-//   -webkit-appearance: none;
-//   height: 1rem;
-//   border-radius: 0.5rem;
-//   background: lighten($color-dark-grey, 0.7);
-//   outline: none;
-//   opacity: 0.7;
-//
-//   &::-webkit-slider-thumb {
-//     -webkit-appearance: none;
-//     background-color: $color-default;
-//     width: 2rem;
-//     height: 2rem;
-//     border-radius: 50%;
-//   }
-// }
+//utility functions
+
+.u-text-center {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.u-color-green {
+  color: $color-green;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem;
+}
+
+.logo-box {
+  display: inline-block;
+}
+
+.logo {
+  height: 2.5rem;
+  margin: 0 1rem;
+}
+
+//this section is to override the default settings from react rangeslider library---------------
 
 .rangeslider {
   margin: 0;
@@ -259,28 +267,4 @@ $color-green: #6aba00;
 .rangeslider-horizontal .rangeslider__handle-tooltip {
   background-color: transparent;
   top: -3rem;
-}
-
-//utility functions
-
-.u-text-center {
-  text-align: center;
-  padding: 2rem 0;
-}
-
-.u-color-green {
-  color: $color-green;
-}
-
-.u-margin-bottom-small {
-  margin-bottom: 1rem;
-}
-
-.logo-box {
-  display: inline-block;
-}
-
-.logo {
-  height: 2.5rem;
-  margin: 0 1rem;
 }
