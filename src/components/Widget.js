@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Slider from 'react-rangeslider';
+import Slider from './react-rangeslider/lib/index.js';
 import './rangeslider.css';
 import thumbUp from './assets/thumbs-up.svg';
 import thumbDown from './assets/thumb-down.svg';
